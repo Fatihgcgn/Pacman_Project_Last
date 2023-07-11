@@ -38,7 +38,7 @@ public class ScoreManager : MonoBehaviour {
         //StartCoroutine("ReadScoresFromDB");
 
         if (level == 2) StartCoroutine("UpdateGUIText");    // if scores is loaded
-        if (level == 1) _lowestHigh = _highscore = 99999;
+        if (level == 1) _lowestHigh = _highscore = 1000;
         //if (level == 1) StartCoroutine("GetHighestScore");  // if game is loaded
     }
 
@@ -59,8 +59,8 @@ public class ScoreManager : MonoBehaviour {
             }
         }
 
-        _highscore = scoreList[0].score;
-        _lowestHigh = scoreList[scoreList.Count - 1].score;
+        _highscore = 1000;
+        _lowestHigh = 1000;
     }
 
     IEnumerator UpdateGUIText()
@@ -80,10 +80,10 @@ public class ScoreManager : MonoBehaviour {
             }
         }
         */
-        scoreList.Clear();
-        scoreList.Add(new Score("DATABASE TEMPORARILY UNAVAILABLE", 999999));
+        //scoreList.Clear();
+        //scoreList.Add(new Score("DATABASE TEMPORARILY UNAVAILABLE", 999999));                          ///////////////////////////
 
-        GameObject.FindGameObjectWithTag("ScoresText").GetComponent<Scores>().UpdateGUIText(scoreList);
+        //GameObject.FindGameObjectWithTag("ScoresText").GetComponent<Scores>().UpdateGUIText(scoreList);
         yield return new WaitForSeconds(0f);
     }
 

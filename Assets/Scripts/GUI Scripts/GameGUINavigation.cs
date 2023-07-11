@@ -90,7 +90,7 @@ public class GameGUINavigation : MonoBehaviour {
 	{
 		Time.timeScale = 0f;		// stop the animations
 		GameManager.gameState = GameManager.GameState.Scores;
-		MenuButton.enabled = false;
+		MenuButton.enabled = true;
 		ScoreCanvas.enabled = true;
 	}
 
