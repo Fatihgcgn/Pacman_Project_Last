@@ -69,11 +69,18 @@ public class ScoreManager : MonoBehaviour
     {
         ScoreYerlestir();
         _firstP.text = PlayerPrefs.GetInt("_highscore").ToString();
-        _secondP.text = ikinci.ToString();
-        _thirdP.text = ucuncu.ToString();
-        _fourthP.text = dorduncu.ToString();
-        _fifthP.text = besinci.ToString();
-        _userP.text = _lowestHigh.ToString();
+        _secondP.text = YuksekSkor["Fatih"].ToString();
+        _thirdP.text = YuksekSkor["Gezgin"].ToString();
+        _fourthP.text = YuksekSkor["Robin"].ToString();
+        _fifthP.text = YuksekSkor["Chopper"].ToString();
+        _userP.text = YuksekSkor["Zoro"].ToString();
+
+        _firstN.text = "You";
+        _secondN.text = "Fatih";
+        _thirdN.text = "Gezgin";
+        _fourthN.text = "Robin";
+        _fifthN.text = "Chopper";
+        _usern.text = "Zoro";
 
     }
     private void AddToDic()
@@ -145,7 +152,7 @@ public class ScoreManager : MonoBehaviour
             _lowestHigh = (YuksekSkor["Zoro"]);
 
 
-            Debug.Log("2 calisti");
+            Debug.Log("Yuksek skor yapildi");
 
         }
 
